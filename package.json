@@ -8,7 +8,7 @@
     "ejs": "> 2.6.1",
     "express": "> 4.16.1",
     "express-load": "^1.1.16",
+    "express-session": "^1.17.2",
     "http-errors": "> 1.6.3"
   }
 }
-
