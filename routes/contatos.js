@@ -1,5 +1,3 @@
-const { application } = require("express");
-
 module.exports = function (app) {
     var autenticar = require('./../middleware/autenticador'),
         contatos = app.controllers.contatos;

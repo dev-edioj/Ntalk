@@ -6,3 +6,4 @@ exports.serverError = function (error, req, res, next) {
 	res.status(500);
 	res.render('server-error',	{error:	error});
 };
+
