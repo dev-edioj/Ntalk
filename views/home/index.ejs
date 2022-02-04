@@ -1,18 +1,30 @@
 <%- include ("../header") %>
 
     <header>
+        <div class="container">
         <h1 class="title">Ntalk</h1>
+        </div>
+        <div class="container">
         <h4 class="subtitle">Bem-vindo</h4>
+        </div>
+        
     </header>
     
     <section>
-        <form action="/entrar" method="post">
-        <input type="text" name="usuario[nome]" placeholder="Nome">
-        <br>
-        <input	type="text" name="usuario[email]" placeholder="E-mail">
-        <br>
-        <button class="btn"	type="submit">Entrar</button>
-        </form>
+        <div class="container">
+            <form action="/entrar" method="post">
+                <input type="text" class="form-control" name="usuario[nome]" placeholder="Nome">
+                <br>
+                <input	type="email" class="form-control" name="usuario[email]" placeholder="E-mail">
+                <br>
+                <button class="btn btn-primary" type="submit" style="background-color: rgb(89, 163, 15);">Entrar</button>
+            </form>
+           
+        </div>
+     
+      
+        
+        
     </section>
 
 <%- include ("../footer") %>
