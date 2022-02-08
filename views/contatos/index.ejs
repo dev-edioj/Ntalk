@@ -1,9 +1,10 @@
 <%-	include ("../header")	%>
+<div class="container">
 <header>
     <h2>Ntalk	-	Agenda	de	contatos</h2>
 </header>
 <section>
-    <form	action="/contato" method="post">
+    <form action="/contato" method="post">
         <input	type="text" name="contato[nome]"
         placeholder="Nome">
         <input	type="text" name="contato[email]"
@@ -19,18 +20,20 @@
             </tr>
         </thead>
         <tbody>
-            <%	contatos.forEach(function(contato,	index)	{	%>
+            <%	contatos.forEach(function(contato,	index) { %>
             <tr>
-                <td><%-	contato.nome	%></td>
-                <td><%-	contato.email	%></td>
+                <td><%=	contato.nome	%></td>
+                <td><%=	contato.email	%></td>
                 <td>
-                    <a	href="/contato/<%=	index	%>">Detalhes</a>
-                    <a	href="/chat">Conversar</a>
+                    <a	href="/contato/<- index %>">Detalhes</a>
+                    <a	href="/chat" id="chat_<%- contato.email %>">Conversar</a>
                 </td>
             </tr>
-                <%	})	%>
+                <%	});	%>
         </tbody>
     </table>
 </section>
-<%-	include ("../exit")%>
-<%-	include ("../footer")	%>
+</div>
+<%- include ("./notify_script")	%>
+<%-	include ("../exit") %>
+<%-	include ("../footer") %>

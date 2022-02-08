@@ -1,10 +1,9 @@
 module.exports = function (app) {
-    var ContatoController = {
+    var ContatosController = {
         index: function (req, res) {
             var usuario = req.session.usuario;
             var contatos = usuario.contatos;
-            var params = {  usuario: usuario,
-                           contatos: contatos };
+            var params = {  usuario: usuario, contatos: contatos };
             res.render('contatos/index', params);
         },
 
@@ -18,8 +17,7 @@ module.exports = function (app) {
         show: function (req, res) {
             var id = req.params.id;
             var contato = req.session.usuario.contatos[id];
-            var  params = { contato: contato,
-                           id: id };
+            var  params = { contato: contato, id: id };
             res.render('contatos/show', params);
         },
 
@@ -47,5 +45,5 @@ module.exports = function (app) {
             res.redirect('/contatos')
         }
     };
-    return ContatoController;
+    return ContatosController;
 };
